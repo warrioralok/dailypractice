@@ -54,3 +54,6 @@ body {
 .table-cell:last-child {
   border-right: none;
 }
+.bold{
+  font-weight: bold;
+}

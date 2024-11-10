@@ -8,7 +8,12 @@ const userlist =[
 ]
 
 const State2 = () =>{
+    // eslint-disable-next-line no-unused-vars
     const [user, newsUsers] = useState(userlist);
+    
+    const avgage = user.reduce((accu, elem) => {
+        return accu + elem.age; // accumulate the age property
+    }, 0)/user.length;
     return(
         <>
             <div className="table">
@@ -19,11 +24,20 @@ const State2 = () =>{
        {user.map((data)=>{ 
               return(  
                 <div className="table-row" key={data.name}>
-                <div className="table-cell">{data.name}</div>
-                <div className="table-cell">{data.age}</div>
-        </div>
+                    <div className="table-cell">{data.name}</div>
+                    <div className="table-cell">{data.age}</div>
+                </div>
               )
         })}
+        
+        <div className="table-row">
+                    <div className="table-cell bold">Total Count:</div>
+                    <div className="table-cell bold">{user.length}</div>
+        </div>
+        <div className="table-row">
+                    <div className="table-cell bold">Average Age</div>
+                    <div className="table-cell bold">{avgage}</div>
+        </div>
     </div>
         </>
     )
