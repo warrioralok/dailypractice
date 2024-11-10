@@ -1,0 +1,22 @@
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: #33d7ff;
+    height: 250px;
+    width: 300px;text-align: center;
+}
+.count{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 50px;
+}
+.buttonContainer{
+    margin-top: 50px;
+    height: 40px;
+    width: 100px;
+    background: 3364ff;
+    color: #000;
+}
